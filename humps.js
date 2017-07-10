@@ -124,13 +124,13 @@
     pascalize: pascalize,
     depascalize: decamelize,
     camelizeKeys: function(object, options) {
-      return _processKeys(_processor(camelize, options), object);
+      return _processKeys(_processor(camelize, options), object, options);
     },
     decamelizeKeys: function(object, options) {
       return _processKeys(_processor(decamelize, options), object, options);
     },
     pascalizeKeys: function(object, options) {
-      return _processKeys(_processor(pascalize, options), object);
+      return _processKeys(_processor(pascalize, options), object, options);
     },
     depascalizeKeys: function () {
       return this.decamelizeKeys.apply(this, arguments);
