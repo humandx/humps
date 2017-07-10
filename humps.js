@@ -46,9 +46,13 @@
     return string.split(split).join(separator);
   };
 
-  var camelize = function(string) {
+  var camelize = function(string, options) {
+    options = options || {};
     if (_isNumerical(string)) {
       return string;
+    }
+    if (options.ignorePrivate && string[0] == "_") {
+    	return string;
     }
     string = string.replace(/[\-_\s]+(.)?/g, function(match, chr) {
       return chr ? chr.toUpperCase() : '';
@@ -57,13 +61,16 @@
     return string.substr(0, 1).toLowerCase() + string.substr(1);
   };
 
-  var pascalize = function(string) {
-    var camelized = camelize(string);
+  var pascalize = function(string, options) {
+    var camelized = camelize(string, options);
     // Ensure 1st char is always uppercase
     return camelized.substr(0, 1).toUpperCase() + camelized.substr(1);
   };
 
   var decamelize = function(string, options) {
+    if (options.ignorePrivate && string[0] == "_") {
+    	return string;
+    }
     return separateWords(string, options).toLowerCase();
   };
 
