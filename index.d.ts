@@ -35,6 +35,6 @@ declare namespace humps {
 	type OptionOrProcessor = HumpsOptions | HumpsProcessor;
 }
 
-declare module "humps" {
+declare module "@humandx/humps" {
 	export = humps;
 }
