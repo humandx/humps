@@ -1,5 +1,5 @@
 {
-  "name": "humps",
+  "name": "@humandx/humps",
   "version": "2.0.2",
   "description": "Underscore-to-camelCase converter (and vice versa) for strings and object keys in JavaScript.",
   "main": "humps.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/domchristie/humps.git"
+    "url": "git://github.com/humandx/humps.git"
   },
   "keywords": [
     "utils",
@@ -19,13 +19,13 @@
     "strings",
     "objects"
   ],
-  "author": "Dom Christie",
+  "author": "David Li-Bland, Dom Christie",
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.2.5"
   },
   "bugs": {
-    "url": "https://github.com/domchristie/humps/issues"
+    "url": "https://github.com/humandx/humps/issues"
   },
-  "homepage": "https://github.com/domchristie/humps"
+  "homepage": "https://github.com/humandx/humps"
 }
