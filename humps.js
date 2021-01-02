@@ -68,6 +68,7 @@
   };
 
   var decamelize = function(string, options) {
+    options = options || {};
     if (options.ignorePrivate && string[0] == "_") {
     	return string;
     }
